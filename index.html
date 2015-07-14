@@ -7,9 +7,43 @@
     <script src="https://cdn.mxpnl.com/libs/mixpanel-platform/build/mixpanel-platform.v0.latest.min.js"></script>
   </head>
   <body class="mixpanel-platform-body">
-    <h1>Hello, World!</h1>
+    <h1>Monthly revenue</h1>
+    <div class="chart"></div>
+    <div class="table"></div>
     <script>
-      // Run queries and display results here
+     var data = {
+	'monthly revenue': {
+		'2015-07-01': 3647548,
+		'2015-06-01': 3729118,
+		'2015-05-01': 3409136,	
+		'2015-04-01': 3542674,	
+		'2015-03-01': 3295144,	
+		'2015-02-01': 3215270,
+		'2015-01-01': 3191726,
+		'2014-12-01': 2969226,
+		'2014-11-01': 2821700,
+		'2014-10-01': 2716554,
+		'2014-09-01': 2551620,
+		'2014-08-01': 2431514,
+		'2014-07-01': 2304525,
+		'2014-06-01': 2222042,
+		'2014-05-01': 2086992,
+		'2014-04-01': 2005127,
+		'2014-03-01': 1871544,
+		'2014-02-01': 1814069,
+		'2014-01-01': 1776338,
+		'2013-12-01': 1606323,
+		'2013-11-01': 1484835,
+		'2013-10-01': 1364521,
+		'2013-09-01': 1242616,
+		'2013-08-01': 1193134,
+		'2013-07-01': 1068287,
+		'2013-06-01': 1100513,
+		'2013-05-01': 951290
+	}
+}
+      $(".chart").MPChart({chartType: 'line', data:data});
+      $('.table').MPTable({data: data, showPercentages: true});
     </script>
   </body>
 </html>
